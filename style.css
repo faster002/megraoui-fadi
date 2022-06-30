@@ -1,0 +1,781 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Akshar:wght@300;400;500;600;700&family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Anek+Latin:wght@100;200;300;400;500;600;700;800&family=Anek+Malayalam:wght@100;200;300;400;500;600;700;800&family=Artifika&family=Barlow+Condensed:ital,wght@0,800;0,900;1,400;1,800&family=Bebas+Neue&family=Cairo:wght@200;600&family=Chelsea+Market&family=Coiny&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Courgette&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&family=Indie+Flower&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,900&family=Kdam+Thmor+Pro&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Lobster&family=Macondo&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Pacifico&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Red+Hat+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Righteous&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&family=Secular+One&family=Shadows+Into+Light&family=Spline+Sans+Mono:wght@300;400;500;600;700&family=Staatliches&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Varela+Round&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: poppins;
+
+}
+.home-page{
+    width: 100%;
+    min-height: 100vh;
+    max-height: 110vh;
+    position: relative;
+    background-image: linear-gradient(to bottom left ,#de6161 , #3f6cf3);
+    position: relative;
+    overflow: hidden;
+}
+.home-page header{
+width: 100%;
+height:3em ;
+padding: 1em 0.5em;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+}
+.home-page header input{
+    display: none;
+    
+}
+
+.home-page header label {
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 0 0 10px black;
+}
+
+.home-page header label img{
+    width: 2em;
+    transition: 1s ease;
+    animation: move-nav-1 2s infinite linear;
+}
+@keyframes move-nav-1{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+.home-page header :checked ~ label img {
+ animation: move-nav-2 2s infinite linear;
+width: 1.5em;
+
+
+}
+@keyframes move-nav-2{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.home-page header :checked ~ .nav{
+    top: 4em;
+}
+.home-page header .nav{
+width: 50%;
+height: 15em;
+box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+border-radius: 1em;
+position: absolute;
+top: 70em;
+right: -5%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+flex-direction: column;
+background-color: white ;
+transition: top 1.2s;
+z-index: 99;
+
+}
+.home-page header .nav a{
+    display: block;
+    color: black;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    
+}
+.home-page header .nav a::first-letter{
+    color: black;
+    font-weight:bold ;
+    font-size: 1.2em;
+    
+}
+
+.home-page  .container{
+    width: 100%;
+    height: calc(100% - 4em);
+    position: relative;
+    top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+.home-page .container .title {
+    width: 100%;
+    height: 50%;
+    padding: 1em;
+}
+.home-page .container .title  p:first-child{
+    font-size: 1em;
+    color: white;
+}
+.home-page .container .title  p:last-child{
+    color: white;
+    line-height: 1.5;
+    font-size: 1.2em;
+}
+.home-page .container .title  h1{
+    font-size: 2.2em;
+}
+.home-page .container .title  h1::first-letter{
+    color: white;
+    text-transform: capitalize;
+}
+.home-page .container .title  h2{
+    font-size: 1.3em;
+}
+.home-page .container .title  h2 span{
+    color: white;
+}
+.home-page .container .title span.bar{
+    display: block;
+    width: 40%;
+    height: 0.2em;
+    background-color: white;
+    margin: 1em 0;
+}
+.home-page .container .image{
+    width: 90%;
+    height: 50%;
+    overflow: hidden;
+    margin: auto;
+
+    
+}
+.home-page .container .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/****about-page****/
+
+
+.about{
+    width: 100%;
+    height: 110vh;
+    background-image: linear-gradient(to top left ,#de6161 , #3f6cf3);
+    position: relative;
+    
+}
+.about .title{
+    width: 100%;
+    height: 3em;
+    background-color: white;
+    box-shadow: 0 0 15px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .title h2{
+    font-size: 1.9em;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+}
+.about .title h2::first-letter{
+    color: white;
+    text-shadow: 0 0 8px black;
+
+}
+.about .container{
+    width: 100%;
+    height: calc(100% - 4em);
+    position: relative;
+    top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+.about .container .info{
+    width: 100%;
+    height: 40%;
+    padding:1em 0.4em 1em 1em ;
+
+    
+}
+.about .container .info p{
+    font-size: 1.3em;
+    color: white;
+}
+.about .container .info a{
+    width: fit-content;
+    display: block;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    color: white;
+    background-color: #fd7878;
+    padding: 0 0.3em;
+    border-radius: 0.4em;
+    margin-top: 1.5em;
+    
+}
+.about .container .image{
+    width: 80%;
+    height: 40%;
+    margin: auto;
+    border-top-left-radius:2em ;
+    border-bottom-left-radius:2em ;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+.about .container .image img{
+    width: 100%;
+    height: 100%;object-fit: cover;
+    object-position: center;
+}
+
+
+/****service-page****/
+.service{
+    width: 100%;
+    min-height: 90vh;
+    position: relative;
+    background-image: linear-gradient(to bottom left ,#de6161 , #3f6cf3);
+    padding:2em 0;
+}
+.service .title{
+    width: 100%;
+    height: 3em;
+    background-color: white;
+    box-shadow: 0 0 15px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.service .title h2{
+    font-size: 1.9em;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+}
+.service .title h2::first-letter{
+    color: white;
+    text-shadow: 0 0 8px black;
+
+}
+.service .container{
+    width: 100%;
+    height: calc(100% - 4em);
+    position: relative;
+    top: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 0.5em 1.5em ;
+}
+
+.service .container .box{
+    width: 100%;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+
+}
+.service .container .box input{
+    display: none;
+}
+.service .container .box label{
+    width: 100%;
+    height: 5.5em;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to left ,#de6161 , #fca3a3);
+
+}
+.service .container .box label img{
+width: 3.5em;
+}
+.service .container .box label h3{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+    pointer-events: none;
+    align-self: flex-start;
+}
+.service .container .box label .more{
+    position: absolute;
+    top: 85%;
+    left: 90%;
+    transform: translate(-50% , -50%);
+}
+.service .container .box label .more img{
+width: 1.5em;
+transform: rotate(90deg);
+filter: drop-shadow(0 0 1px white);
+transition: transform 2s;
+}
+.service .container .box :checked ~ label .more img{
+    transform: rotate(270deg);
+}
+.service .container .box .info{
+    overflow: hidden;
+    max-height: 0;
+   transition: 1.7s;
+   position: relative;
+   z-index: 1;
+   
+}
+.service .container .box .info::after{
+content: '';
+position: absolute;
+bottom: 100%;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: white;
+z-index: -1;
+transition: 1s;
+transition-delay: 0.1s;
+}
+.service .container .box :checked ~ .info::after{
+    bottom: 0%;
+}
+.service .container .box :checked ~ .info{
+    max-height: 100vh;
+}
+.service .container .box .info p{
+    font-size: 1.2em;
+    padding: 1em 0.5em;
+}
+
+.service .container .box::after{
+    content: '';
+}
+
+
+/*******project*****/
+.project{
+    width: 100%;
+    min-height:  100vh;
+    position: relative;
+    background-image: linear-gradient(to top left ,#de6161 , #3f6cf3);
+    padding:2em 0;
+}
+.project .title{
+    width: 100%;
+    height: 3em;
+    background-color: white;
+    box-shadow: 0 0 15px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project .title h2{
+    font-size: 1.9em;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+}
+.project .title h2::first-letter{
+    color: white;
+    text-shadow: 0 0 8px black;
+
+}
+.project .container{
+    width: 100%;
+    height: calc(100% - 4em);
+    position: relative;
+    top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em ;
+}
+.project .container .box{
+    width: 100%;
+    overflow: hidden;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.6);
+    position: relative;
+    border-radius: 1em;
+
+}
+.project .container .box input{
+    display: none;
+
+}
+.project .container .box label{
+    position: relative;
+}
+.project .container .box label .image{
+    width: 100%;
+    height: 25em;
+    overflow: hidden;
+
+}
+.project .container .box :checked ~ label .image img{
+    object-position: bottom;
+}
+.project .container .box label .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition:object-position 4s;
+}
+.project .container .box .information{
+padding: 1em 0.5em; 
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.project .container .box .information .info{
+width: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.project .container .box .information .info h2{
+    color: white;
+    text-transform: capitalize;
+    text-shadow: 0 0 5px black;
+}
+.project .container .box .information .info a{
+    display: block;
+    font-size: 1.1em;
+    color: white;
+    font-weight: bold;
+    background: #3f6cf3;
+    box-shadow: 0 0 15px black;
+    border-radius: 0.4em;
+    padding: 0 0.3em;
+}
+.project .container .box .information p{
+font-size: 1.2em;
+color: white;
+margin-top: 0.5em;
+text-align: center;
+width: 85%;
+
+}
+.project .link{
+    width: 100%;
+    height: 5em;
+    margin: 2em 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.project .link a{
+    width: fit-content;
+    display: block;
+    font-size: 1.2em;
+    color: white;
+    text-transform: capitalize;
+    border: solid 3px white;
+    box-shadow: 0 0 15px white;
+    padding:  0.2em;
+    border-radius: 0.4em;
+}
+
+/**********more-project****************/
+.more-container {
+    background-image: linear-gradient(to bottom left ,#de6161 , #3f6cf3);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.more-container  h1{
+    text-transform: uppercase;
+    position: absolute;
+    top:20%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+}
+.dew {
+    position: absolute;
+    top: 50%;
+    width: 11em;
+    height: 10em;
+    background: transparent;
+    border: 1.3px solid rgba(9, 63, 12, 0.1);
+    box-shadow: 
+        5px 10px 25px rgba(9, 63, 12, 0.1) inset,
+        10px 20px 10px rgba(9, 63, 12, 0.2),
+        15px 20px 10px rgba(9, 63, 12, 0.1),
+        -5px -15px 15px rgba(253, 134, 134, 0.9) inset;
+     animation: shake linear 3s infinite;
+    
+}
+
+.dew:before {
+    content: '';
+    position: absolute;
+    left: 70%;
+    top: 25%;
+    width: 1.3em;
+    height: 1.5em;
+    background: rgba(211, 219, 225, 0.7);
+    transform: rotate(320deg);
+    animation: shake linear 2s infinite;
+}
+
+.dew:after {
+    content: '';
+    position: absolute;
+    left: 60%;
+    top: 28%;
+    width: 0.7em;
+    height: 0.6em;
+    background: rgba(244, 248, 248, 0.7);
+    animation: shake linear 2s infinite;
+    
+}
+
+@keyframes shake {
+    0% {
+        border-radius: 70% 80% 75% 65%;
+        top: 50%;
+    }
+
+    50% {
+        border-radius: 60% 50% 65% 80%;
+      top: 55%;
+    }
+
+    100% {
+        border-radius: 70% 80% 75% 65%;
+        top: 50%;
+    }
+}
+
+
+
+/***********end-more-project****************/
+
+
+/***********footer****************/
+.footer{
+    width: 100%;
+    background-image: linear-gradient(to bottom left ,#de6161 , #3f6cf3);
+    position: relative;
+    padding-bottom:1em ;
+
+}
+.footer .container {
+    width: 100%;
+    height: 100%;
+    padding: 1em ;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    border-top: solid 5px rgb(255, 255, 255);
+
+}
+.footer .container .first{
+    width: 100%;
+    position: relative;
+    
+}
+.footer .container h2{
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+    color: rgba(0, 0, 0, 0.9);
+}
+.footer .container h2::first-letter{
+    color: white;
+    font-size: 1.4em;
+}
+.footer .container  p{
+    font-size: 1em;
+    color: white;
+}
+.footer .container .secend p span {
+font-weight: bold;
+color: black;
+text-transform: capitalize;
+}
+.footer .container .last .links{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+.footer .container .last .links .social{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.footer .container .last .links .social img{
+    width: 1.5em;
+    margin-right: 1em;
+}
+.footer .container .last .links a{
+    display: block;
+    color: white;
+    text-transform: capitalize;
+
+}
+/***********learn-page****************/
+.learn{
+    width: 100%;
+    min-height: 110vh;
+    background-image: linear-gradient(to bottom left ,#de6161 , #3f6cf3);
+padding-bottom:  2em;
+}
+
+.learn .title{
+    width: 100%;
+    height: 8em;
+    background-color: white;
+    box-shadow: 0 0 15px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+.learn .title h2{
+    font-size: 1.9em;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+}
+.learn .title h2::first-letter{
+    color: #3f6cf3;
+
+}
+.learn .title p{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #3f6cf3;
+}
+.learn .container{
+    width: 100%;
+    height: calc(100% - 8em);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    top: 1em;
+    padding: 1em 0.5em;
+    
+}
+.learn .container .content-box input{
+    display: none;
+
+}
+.learn .container .content-box :checked ~ label .box{
+    transform: rotatey(180deg);
+}
+
+
+.learn .container .box{
+width: 100%;
+height: 10em;
+box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6) , -5px -5px 15px rgba(0, 0, 0, 0.2);
+border-radius: 1em;
+position: relative;
+transform-style:preserve-3d;
+transition: 0.5s;
+perspective: 500px;
+}
+.learn .container .box .content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1em;
+    overflow: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.learn .container .box .content.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+
+}
+.learn .container .box .content.info{
+    transform: rotatey(180deg);
+    gap: 2em;
+    background-image: linear-gradient(to bottom left ,#de6161 , #3f6cf3);
+    position: relative;
+
+} 
+.learn .container .box .content.info::after{
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -40%;
+    width: 100%;
+    height: 120%;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: white;
+
+}
+.learn .container .box .content.info h2{
+    text-transform: capitalize;
+    color: black;
+    text-align: center;
+
+}
+.learn .container .box .content.info a{
+    width: fit-content;
+    display: block;
+    font-size: 1.2em;
+    color: #3f6cf3;
+    align-self: flex-start;
+    margin-left: 1em ;
+    font-weight: bold;
+    position: relative;
+
+}
+.learn .container .box .content.info a::after{
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+height: 0.2em;
+background-color: black;
+}
+.learn .last-part{
+    width: 100%;
+    margin-top: 2em;
+    text-align: center;
+    padding: 0.2em 1em;
+    background-color: #3f6cf3;
+}
+.learn .last-part p{
+    font-size: 1.3em;
+    font-weight: 600;
+    color: white;
+    pointer-events: none;
+}
